@@ -49,6 +49,20 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,249,254,.92);backdro
 nav.links{display:flex;gap:22px;flex-wrap:nowrap}
 nav.links a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;transition:opacity .2s;white-space:nowrap}
 nav.links a:hover{opacity:1;color:var(--royal)}
+
+/* ---------- nav dropdowns ---------- */
+nav.links .menu{position:relative}
+nav.links .menu>button{background:none;border:none;font-family:inherit;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;transition:opacity .2s}
+nav.links .menu>button::after{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.7;transition:transform .2s}
+nav.links .menu:hover>button,nav.links .menu>button[aria-expanded="true"]{opacity:1;color:var(--royal)}
+nav.links .menu:hover>button::after,nav.links .menu>button[aria-expanded="true"]::after{transform:rotate(180deg)}
+nav.links .drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:210px;background:var(--white);border:1px solid var(--mist);border-radius:12px;box-shadow:0 16px 40px rgba(27,42,107,.16);padding:8px;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s;z-index:70}
+nav.links .menu:hover .drop,nav.links .menu:focus-within .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
+nav.links .drop::before{content:"";position:absolute;top:-10px;left:0;right:0;height:12px}
+nav.links .drop a{display:block;padding:10px 14px;border-radius:8px;font-size:.88rem;opacity:.85;white-space:nowrap}
+nav.links .drop a:hover{background:var(--ice);opacity:1;color:var(--royal)}
+nav.links a.nav-donate{background:var(--crimson,#C1272D);color:#fff !important;opacity:1;border-radius:999px;padding:8px 18px;font-weight:700}
+nav.links a.nav-donate:hover{background:#A81F24}
 @media(max-width:960px){nav.links{display:none}}
 
 /* ---------- mobile menu ---------- */
@@ -159,15 +173,29 @@ footer{background:var(--ink);color:#B9C6E4;padding:48px 0 36px;font-size:.88rem}
       <span class="mark">ASOC 2026</span>
     </a>
     <nav class="links" aria-label="Sections">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#program">Program</a>
+      <div class="menu">
+        <button type="button" aria-expanded="false">Conference</button>
+        <div class="drop">
+          <a href="index.html#about">About</a>
+          <a href="index.html#history">Past Conferences</a>
+          <a href="index.html#program">Program</a>
+          <a href="index.html#themes">Themes</a>
+          <a href="index.html#hosts">Convening Organizations</a>
+          <a href="index.html#leadership">Leadership</a>
+          <a href="index.html#connect">Stay Connected</a>
+        </div>
+      </div>
       <a href="register.html">Register</a>
-      <a href="getting-there.html" style="opacity:1;color:var(--royal);font-weight:600">Getting There</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="index.html#leadership">Leadership</a>
+      <a href="index.html#abstracts">Abstracts</a>
+      <div class="menu">
+        <button type="button" aria-expanded="false">Plan Your Visit</button>
+        <div class="drop">
+          <a href="getting-there.html">Getting There</a>
+          <a href="hotels.html">Hotels in Addis</a>
+        </div>
+      </div>
       <a href="index.html#support">Support Us</a>
-      <a href="index.html#connect">Connect</a>
+      <a class="nav-donate" href="donate.html">Donate</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
@@ -186,6 +214,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:48px 0 36px;font-size:.88rem}
   <p class="grp">Plan Your Visit</p>
   <a href="getting-there.html">Getting There</a>
   <a href="hotels.html">Hotels in Addis</a>
+  <a href="donate.html">Donate</a>
   <p class="grp">More</p>
   <a href="index.html#leadership">Leadership</a>
   <a href="index.html#support">Support Us</a>
@@ -279,6 +308,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:48px 0 36px;font-size:.88rem}
         <li><a href="register.html">Register</a></li>
         <li><a href="index.html#program">Program at a Glance</a></li>
         <li><a href="index.html#support">Support Us</a></li>
+        <li><a href="donate.html">Donate</a></li>
       </ul>
     </div>
   </div>

@@ -128,6 +128,20 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,249,254,.92);backdro
 nav.links{display:flex;gap:22px;flex-wrap:nowrap}
 nav.links a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;transition:opacity .2s;white-space:nowrap}
 nav.links a:hover,nav.links a:focus-visible{opacity:1;color:var(--royal)}
+
+/* ---------- nav dropdowns ---------- */
+nav.links .menu{position:relative}
+nav.links .menu>button{background:none;border:none;font-family:inherit;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;transition:opacity .2s}
+nav.links .menu>button::after{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.7;transition:transform .2s}
+nav.links .menu:hover>button,nav.links .menu>button[aria-expanded="true"]{opacity:1;color:var(--royal)}
+nav.links .menu:hover>button::after,nav.links .menu>button[aria-expanded="true"]::after{transform:rotate(180deg)}
+nav.links .drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:210px;background:var(--white);border:1px solid var(--mist);border-radius:12px;box-shadow:0 16px 40px rgba(27,42,107,.16);padding:8px;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s;z-index:70}
+nav.links .menu:hover .drop,nav.links .menu:focus-within .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
+nav.links .drop::before{content:"";position:absolute;top:-10px;left:0;right:0;height:12px}
+nav.links .drop a{display:block;padding:10px 14px;border-radius:8px;font-size:.88rem;opacity:.85;white-space:nowrap}
+nav.links .drop a:hover{background:var(--ice);opacity:1;color:var(--royal)}
+nav.links a.nav-donate{background:var(--crimson,#C1272D);color:#fff !important;opacity:1;border-radius:999px;padding:8px 18px;font-weight:700}
+nav.links a.nav-donate:hover{background:#A81F24}
 @media(max-width:960px){nav.links{display:none}}
 
 /* ---------- mobile menu ---------- */
@@ -185,6 +199,15 @@ body.nav-open{overflow:hidden}
 @keyframes blip{0%{box-shadow:0 0 0 0 rgba(176,34,31,.7)}70%{box-shadow:0 0 0 10px rgba(176,34,31,0)}100%{box-shadow:0 0 0 0 rgba(176,34,31,0)}}
 @media(prefers-reduced-motion:reduce){.register-pulse,.register-pulse .live{animation:none}}
 .hero-card .actions{margin-top:14px}
+.hero-donate{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
+.hd-label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;text-align:center;margin-bottom:12px}
+.hd-btns{display:flex;gap:10px}
+.hd-btn{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:.82rem;padding:12px 10px;border-radius:10px;color:#fff;transition:transform .15s,filter .15s;line-height:1.25}
+.hd-btn.esi{background:#C1272D}
+.hd-btn.utsw{background:#00507F}
+.hd-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.hd-more{display:block;text-align:center;margin-top:12px;font-size:.8rem;color:var(--gold-soft);text-decoration:none;font-weight:600}
+.hd-more:hover{text-decoration:underline}
 .hero-card .btn{flex:1;justify-content:center}
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-soft);margin-bottom:14px}
 .eyebrow .am{font-family:var(--display);text-transform:none;letter-spacing:0;color:#fff;margin-right:10px;font-size:1rem}
@@ -400,6 +423,19 @@ h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,3.4vw,2.6re
 .contact-cta{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:8px;background:var(--royal);color:#fff;margin-top:16px;box-shadow:0 6px 18px rgba(28,99,201,.28)}
 @media(max-width:760px){.support{grid-template-columns:1fr}}
 
+.partner-give{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+.pg{background:var(--white);border:1px solid var(--mist);border-radius:16px;padding:30px;display:flex;flex-direction:column;text-align:center;box-shadow:0 6px 22px rgba(27,42,107,.07)}
+.pg img{max-height:78px;width:auto;margin:0 auto 16px}
+.pg-word{height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:16px}
+.pg-word span{font-family:var(--display);font-size:1.5rem;color:#00507F;font-weight:700}
+.pg-word small{font-size:.85rem;color:#5a689a}
+.pg h3{font-family:var(--display);font-size:1.15rem;color:var(--navy);margin-bottom:10px}
+.pg p{font-size:.9rem;color:#33427A;margin-bottom:18px}
+.pg-btn{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:.92rem;padding:13px 22px;border-radius:10px;background:#C1272D;color:#fff;transition:transform .15s,filter .15s}
+.pg-btn.utsw{background:#00507F}
+.pg-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+@media(max-width:820px){.partner-give{grid-template-columns:1fr}}
+
 /* connect */
 section.block.connect{background:linear-gradient(120deg,var(--navy),#22399B);color:#fff;text-align:center}
 .connect h2{color:#fff;margin:0 auto 18px}
@@ -476,18 +512,29 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
       <span class="mark">ASOC 2026</span>
     </a>
     <nav class="links" aria-label="Sections">
-      <a href="#about">About</a>
-      <a href="#history">History</a>
-      <a href="#program">Program</a>
+      <div class="menu">
+        <button type="button" aria-expanded="false">Conference</button>
+        <div class="drop">
+          <a href="#about">About</a>
+          <a href="#history">Past Conferences</a>
+          <a href="#program">Program</a>
+          <a href="#themes">Themes</a>
+          <a href="#hosts">Convening Organizations</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#connect">Stay Connected</a>
+        </div>
+      </div>
       <a href="register.html">Register</a>
       <a href="#abstracts">Abstracts</a>
-      <a href="#hosts">Hosts</a>
-      <a href="#themes">Themes</a>
-      <a href="getting-there.html">Getting There</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="#leadership">Leadership</a>
+      <div class="menu">
+        <button type="button" aria-expanded="false">Plan Your Visit</button>
+        <div class="drop">
+          <a href="getting-there.html">Getting There</a>
+          <a href="hotels.html">Hotels in Addis</a>
+        </div>
+      </div>
       <a href="#support">Support Us</a>
-      <a href="#connect">Connect</a>
+      <a class="nav-donate" href="donate.html">Donate</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span><span></span>
@@ -508,6 +555,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
   <p class="grp">Plan Your Visit</p>
   <a href="getting-there.html">Getting There</a>
   <a href="hotels.html">Hotels in Addis</a>
+  <a href="donate.html">Donate</a>
   <p class="grp">More</p>
   <a href="#leadership">Leadership</a>
   <a href="#support">Support Us</a>
@@ -554,6 +602,14 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
         <div class="actions">
           <a class="btn primary" href="#program">View the Program</a>
           <a class="btn ghost" href="#history">Past Conferences</a>
+        </div>
+        <div class="hero-donate">
+          <p class="hd-label">Donate through our partner organizations</p>
+          <div class="hd-btns">
+            <a class="hd-btn esi" href="https://donate.stripe.com/eVq9AT5JseFV25PgHu8Ra02" target="_blank" rel="noopener">Ethiopia Stroke Initiative</a>
+            <a class="hd-btn utsw" href="https://give.utsouthwestern.edu/support-global-stroke-training-and-education/?a=13741170" target="_blank" rel="noopener">UT Southwestern</a>
+          </div>
+          <a class="hd-more" href="donate.html">More ways to give &rarr;</a>
         </div>
       </div>
     </div>
@@ -874,8 +930,25 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
       <div class="sup"><div class="ic">💙</div><h3>Donations</h3>
         <p>Contributions of any size help expand access to stroke care across Africa and support delegates who might otherwise be unable to attend. To donate, please contact the event organizers directly.</p></div>
     </div>
-    <p class="body" style="margin-top:32px">For sponsorship and donations, please contact the event organizers:</p>
+    <p class="kicker" style="margin-top:44px">Donate Through Our Partner Organizations</p>
+    <p class="body">ASOC 2026 does not collect donations directly. Contributions are received by our partner organizations, which support the conference and the wider mission of transforming stroke care in Africa.</p>
+    <div class="partner-give">
+      <div class="pg">
+        <img src="esi-logo.jpg" alt="Ethiopia Stroke Initiative logo">
+        <h3>Ethiopia Stroke Initiative</h3>
+        <p>A US-based non-profit organization supporting ASOC 2026, with a mission to advance stroke research and awareness and to develop comprehensive stroke services nationwide through fellowship training, ensuring world-class care reaches every corner of Ethiopia.</p>
+        <a class="pg-btn" href="https://donate.stripe.com/eVq9AT5JseFV25PgHu8Ra02" target="_blank" rel="noopener">Donate to ESI &rarr;</a>
+      </div>
+      <div class="pg">
+        <div class="pg-word"><span>UT Southwestern</span><small>Medical Center</small></div>
+        <h3>Global Stroke Training &amp; Education</h3>
+        <p>Support global stroke training and education through UT Southwestern Medical Center, building stroke care capacity through training programs that extend expertise to clinicians serving communities across Africa.</p>
+        <a class="pg-btn utsw" href="https://give.utsouthwestern.edu/support-global-stroke-training-and-education/?a=13741170" target="_blank" rel="noopener">Donate via UT Southwestern &rarr;</a>
+      </div>
+    </div>
+    <p class="body" style="margin-top:36px">For sponsorship enquiries, please contact the event organizers:</p>
     <a class="contact-cta" href="mailto:asocconference@gmail.com">✉️ asocconference@gmail.com</a>
+    <a class="contact-cta" href="donate.html" style="background:#C1272D;margin-left:12px">❤️ See All Ways to Give</a>
   </div>
 </section>
 
@@ -935,6 +1008,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
         <li><a href="hotels.html">Hotels in Addis</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#support">Support Us</a></li>
+        <li><a href="donate.html">Donate</a></li>
       </ul>
     </div>
   </div>
