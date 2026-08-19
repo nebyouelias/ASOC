@@ -119,29 +119,33 @@ a{color:var(--royal)}
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(245,249,254,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--mist)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:32px;height:68px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none;transition:opacity .2s}
+.brand:hover{opacity:.82}
 .brand .mark{white-space:nowrap}
 .brand span.tag{white-space:nowrap}
 @media(max-width:1120px){.brand span.tag{display:none}}
 .brand .mark{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--royal);letter-spacing:.02em}
 .brand span.tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
-nav.links{display:flex;gap:22px;flex-wrap:nowrap}
-nav.links a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;transition:opacity .2s;white-space:nowrap}
-nav.links a:hover,nav.links a:focus-visible{opacity:1;color:var(--royal)}
+nav.links{display:flex;align-items:center;gap:4px;flex-wrap:nowrap}
+nav.links>a,nav.links .menu>button{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 14px;border-radius:10px;font-family:inherit;font-size:.86rem;font-weight:600;line-height:1;color:var(--ink);opacity:.8;text-decoration:none;white-space:nowrap;background:none;border:none;cursor:pointer;position:relative;transition:color .2s,background .2s,opacity .2s}
+nav.links>a::after,nav.links .menu>button::before{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--gold);border-radius:2px;transform:scaleX(0);transform-origin:center;transition:transform .25s ease}
+nav.links>a:hover,nav.links .menu:hover>button,nav.links>a:focus-visible{opacity:1;color:var(--royal);background:var(--ice)}
+nav.links>a:hover::after,nav.links .menu:hover>button::before{transform:scaleX(1)}
+nav.links .menu{position:relative;display:flex;align-items:center}
+nav.links .menu>button{gap:7px}
+nav.links .menu>button::after{content:"";position:static;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.65;background:none;transform:none;transition:transform .25s}
+nav.links .menu:hover>button::after{transform:rotate(180deg);opacity:1}
+nav.links .drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:224px;background:var(--white);border:1px solid var(--mist);border-radius:14px;box-shadow:0 20px 46px rgba(27,42,107,.18);padding:8px;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:70}
+nav.links .menu:hover .drop,nav.links .menu:focus-within .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(4px)}
+nav.links .drop::before{content:"";position:absolute;top:-12px;left:0;right:0;height:14px}
+nav.links .drop a{display:block;height:auto;padding:11px 14px;border-radius:9px;font-size:.88rem;font-weight:500;opacity:.85;white-space:nowrap;text-decoration:none;color:var(--ink);transition:background .18s,color .18s,padding-left .18s}
+nav.links .drop a::after{display:none}
+nav.links .drop a:hover{background:var(--ice);opacity:1;color:var(--royal);padding-left:19px}
+nav.links>a.nav-donate{margin-left:8px;height:40px;background:linear-gradient(120deg,#C1272D,#E0353C);color:#fff;opacity:1;border-radius:999px;padding:0 22px;font-weight:800;letter-spacing:.02em;box-shadow:0 6px 18px rgba(193,39,45,.32);overflow:hidden}
+nav.links>a.nav-donate::after{display:none}
+nav.links>a.nav-donate:hover{background:linear-gradient(120deg,#A81F24,#C1272D);color:#fff;transform:translateY(-1px);box-shadow:0 10px 24px rgba(193,39,45,.45)}
 
 /* ---------- nav dropdowns ---------- */
-nav.links .menu{position:relative}
-nav.links .menu>button{background:none;border:none;font-family:inherit;font-size:.86rem;font-weight:500;color:var(--ink);opacity:.75;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;transition:opacity .2s}
-nav.links .menu>button::after{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.7;transition:transform .2s}
-nav.links .menu:hover>button,nav.links .menu>button[aria-expanded="true"]{opacity:1;color:var(--royal)}
-nav.links .menu:hover>button::after,nav.links .menu>button[aria-expanded="true"]::after{transform:rotate(180deg)}
-nav.links .drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:210px;background:var(--white);border:1px solid var(--mist);border-radius:12px;box-shadow:0 16px 40px rgba(27,42,107,.16);padding:8px;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s;z-index:70}
-nav.links .menu:hover .drop,nav.links .menu:focus-within .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(2px)}
-nav.links .drop::before{content:"";position:absolute;top:-10px;left:0;right:0;height:12px}
-nav.links .drop a{display:block;padding:10px 14px;border-radius:8px;font-size:.88rem;opacity:.85;white-space:nowrap}
-nav.links .drop a:hover{background:var(--ice);opacity:1;color:var(--royal)}
-nav.links a.nav-donate{background:var(--crimson,#C1272D);color:#fff !important;opacity:1;border-radius:999px;padding:8px 18px;font-weight:700}
-nav.links a.nav-donate:hover{background:#A81F24}
 @media(max-width:960px){nav.links{display:none}}
 
 /* ---------- mobile menu ---------- */
@@ -199,15 +203,25 @@ body.nav-open{overflow:hidden}
 @keyframes blip{0%{box-shadow:0 0 0 0 rgba(176,34,31,.7)}70%{box-shadow:0 0 0 10px rgba(176,34,31,0)}100%{box-shadow:0 0 0 0 rgba(176,34,31,0)}}
 @media(prefers-reduced-motion:reduce){.register-pulse,.register-pulse .live{animation:none}}
 .hero-card .actions{margin-top:14px}
-.hero-donate{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
-.hd-label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;text-align:center;margin-bottom:12px}
-.hd-btns{display:flex;gap:10px}
-.hd-btn{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:.82rem;padding:12px 10px;border-radius:10px;color:#fff;transition:transform .15s,filter .15s;line-height:1.25}
-.hd-btn.esi{background:#C1272D}
-.hd-btn.utsw{background:#00507F}
-.hd-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
-.hd-more{display:block;text-align:center;margin-top:12px;font-size:.8rem;color:var(--gold-soft);text-decoration:none;font-weight:600}
-.hd-more:hover{text-decoration:underline}
+.hero-donate{margin-top:22px;padding:18px 16px 16px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(201,162,39,.45);position:relative;overflow:hidden;animation:giveGlow 3.6s ease-in-out infinite}
+@keyframes giveGlow{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.0),inset 0 0 24px rgba(201,162,39,.06)}50%{box-shadow:0 0 26px 0 rgba(201,162,39,.28),inset 0 0 24px rgba(201,162,39,.12)}}
+.hero-donate::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);animation:giveSheen 5.5s ease-in-out infinite;pointer-events:none}
+@keyframes giveSheen{0%{left:-70%}40%{left:130%}100%{left:130%}}
+.hd-label{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft);font-weight:800;text-align:center;margin-bottom:14px}
+.hd-label .heart{display:inline-block;color:#FF5A60;font-size:.95rem;animation:beat 1.6s ease-in-out infinite;transform-origin:center}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.2)}56%{transform:scale(1)}}
+.hd-btns{display:flex;gap:10px;position:relative;z-index:1}
+.hd-btn{flex:1;text-align:center;text-decoration:none;font-weight:800;font-size:.82rem;padding:14px 10px;border-radius:12px;color:#fff;line-height:1.25;position:relative;overflow:hidden;transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .18s}
+.hd-btn::before{content:"";position:absolute;top:0;left:-80%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transition:left .55s ease}
+.hd-btn:hover::before{left:130%}
+.hd-btn.esi{background:linear-gradient(135deg,#C1272D,#E0353C);box-shadow:0 6px 18px rgba(193,39,45,.42)}
+.hd-btn.utsw{background:linear-gradient(135deg,#00507F,#0A6FA8);box-shadow:0 6px 18px rgba(0,80,127,.42)}
+.hd-btn:hover{transform:translateY(-3px) scale(1.03)}
+.hd-btn.esi:hover{box-shadow:0 12px 28px rgba(193,39,45,.6)}
+.hd-btn.utsw:hover{box-shadow:0 12px 28px rgba(0,80,127,.6)}
+.hd-more{display:block;text-align:center;margin-top:13px;font-size:.8rem;color:var(--gold-soft);text-decoration:none;font-weight:700;position:relative;z-index:1;transition:letter-spacing .2s,color .2s}
+.hd-more:hover{color:#fff;letter-spacing:.03em}
+@media(prefers-reduced-motion:reduce){.hero-donate,.hero-donate::after,.hd-label .heart{animation:none}.hd-btn:hover{transform:none}}
 .hero-card .btn{flex:1;justify-content:center}
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-soft);margin-bottom:14px}
 .eyebrow .am{font-family:var(--display);text-transform:none;letter-spacing:0;color:#fff;margin-right:10px;font-size:1rem}
@@ -604,7 +618,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
           <a class="btn ghost" href="#history">Past Conferences</a>
         </div>
         <div class="hero-donate">
-          <p class="hd-label">Donate through our partner organizations</p>
+          <p class="hd-label"><span class="heart">&#10084;</span> Donate through our partner organizations</p>
           <div class="hd-btns">
             <a class="hd-btn esi" href="https://donate.stripe.com/eVq9AT5JseFV25PgHu8Ra02" target="_blank" rel="noopener">Ethiopia Stroke Initiative</a>
             <a class="hd-btn utsw" href="https://give.utsouthwestern.edu/support-global-stroke-training-and-education/?a=13741170" target="_blank" rel="noopener">UT Southwestern</a>
