@@ -46,7 +46,7 @@ Deployed on Vercel. Configuration lives in `vercel.json` (caching headers, clean
 
 Open the relevant `.html` file and edit directly — styles are in a `<style>` block at the top of each file. Key things you may want to change over time:
 
-- **Dates and deadlines** — search for `August 30` (abstract deadline) and `September 10` (decisions)
+- **Dates and deadlines** — search for `September 6` (abstract deadline) and `September 10` (decisions)
 - **Announcement bars** — search for `announce-stack` near the top of the `<body>`
 - **Registration form** — the embedded form URL is in `register.html`, search for `docs.google.com/forms`
 
