@@ -2,7 +2,7 @@
 
 The official website for the **6th African Stroke Organization Conference (ASOC 2026)**, held jointly with the **1st Ethiopia Stroke Foundation Comprehensive Stroke Symposium**.
 
-**November 1–4, 2026 · Addis Ababa, Ethiopia**
+**November 1–4, 2026 · Adwa Memorial Museum, Addis Ababa, Ethiopia**
 Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Africa*
 
 🔗 Live site: https://asoc-africanstroke.org
@@ -13,7 +13,7 @@ Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Afri
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — hero video, about, conference history, program, call for abstracts, hosts, themes, leadership, sponsorship |
+| `index.html` | Home — hero video, about, conference history, program, venue, call for abstracts, hosts, themes, leadership, sponsorship |
 | `register.html` | Registration — embedded registration form, hybrid attendance info |
 | `getting-there.html` | Travel guide — flights, visas, ride apps, money, SIM cards, altitude, weather |
 | `hotels.html` | 29 Addis Ababa hotels with direct phone and email booking links |
@@ -47,6 +47,7 @@ Deployed on Vercel. Configuration lives in `vercel.json` (caching headers, clean
 Open the relevant `.html` file and edit directly — styles are in a `<style>` block at the top of each file. Key things you may want to change over time:
 
 - **Dates and deadlines** — search for `September 6` (abstract deadline) and `September 10` (decisions)
+- **Venue** — search for `Adwa Memorial Museum` (named on every page, plus the `#venue` section in `index.html`)
 - **Announcement bars** — search for `announce-stack` near the top of the `<body>`
 - **Registration form** — the embedded form URL is in `register.html`, search for `docs.google.com/forms`
 
