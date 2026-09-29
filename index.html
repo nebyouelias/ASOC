@@ -492,7 +492,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     {"@type":"Question","name":"How do I register for ASOC 2026?",
      "acceptedAnswer":{"@type":"Answer","text":"Registration is open and free for all participants. Complete the registration form at https://asoc-africanstroke.org/register.html. ASOC 2026 is a hybrid conference, so you may attend in person at the Adwa Memorial Museum in Addis Ababa or virtually from anywhere."}},
     {"@type":"Question","name":"What is the abstract submission deadline for ASOC 2026?",
-     "acceptedAnswer":{"@type":"Answer","text":"The abstract submission deadline has been extended to September 6, 2026. Acceptance decisions will be made by September 10, 2026. Abstracts are submitted by email to asocconference@gmail.com with the subject line ASOC 2026 Abstract followed by the presenting author's last name."}},
+     "acceptedAnswer":{"@type":"Answer","text":"Abstract submissions for ASOC 2026 closed on September 6, 2026. Acceptance decisions were due by September 10, 2026, and presenting authors are notified by email at the address used for their submission. Registration for the conference is still open and free."}},
     {"@type":"Question","name":"Can I attend ASOC 2026 virtually?",
      "acceptedAnswer":{"@type":"Answer","text":"Yes. ASOC 2026 is a hybrid conference. You can register to participate virtually from anywhere in the world, or attend in person in Addis Ababa."}},
     {"@type":"Question","name":"Do I need a visa to attend ASOC 2026 in Ethiopia?",
@@ -511,13 +511,6 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     <span class="tag">Now Open</span>
     <span><strong>Registration is Now Open</strong> &mdash; free for all participants</span>
     <span class="go">Register now &rarr;</span>
-  </a>
-</div>
-<div class="announce">
-  <a href="#abstracts">
-    <span class="tag">Just Announced</span>
-    <span><strong>Abstract Deadline Extended</strong> to September 6, 2026</span>
-    <span class="go">Submit now &rarr;</span>
   </a>
   <button class="close" id="announceClose" aria-label="Dismiss announcements">&times;</button>
 </div>
@@ -790,22 +783,16 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 <!-- ================= ABSTRACTS ================= -->
 <section class="block lattice" id="abstracts">
   <div class="wrap">
-    <p class="kicker kicker-xl">Call for Abstract Submissions</p>
+    <p class="kicker kicker-xl">Abstracts</p>
     <h2>Share your science in Addis Ababa</h2>
-    <p class="body">ASOC 2026 invites abstracts for poster or oral presentation. The conference welcomes submissions from researchers at all career stages, and particularly encourages early-career researchers, postdoctoral fellows, residents, graduate students, and trainees to submit and share their work. All accepted abstracts will be published in a peer-reviewed journal.</p>
+    <p class="body">ASOC 2026 invited abstracts for poster or oral presentation from researchers at all career stages, with particular encouragement for early-career researchers, postdoctoral fellows, residents, graduate students, and trainees. All accepted abstracts will be published in a peer-reviewed journal.</p>
 
-    <div class="extended" role="status">
-      <span class="badge">New Deadline</span>
-      <span class="msg">
-        <b>Abstract Deadline Extended!</b>
-        <span>You now have until <strong>September 6, 2026</strong> to submit. <s>August 30</s> &rarr; <strong>September 6</strong></span>
-      </span>
-    </div>
+    <div class="abs-welcome" role="status" style="margin-top:0"><b>Abstract submissions are now closed.</b> The deadline was September 6, 2026. Presenting authors are notified of acceptance decisions by email. If you submitted an abstract and have a question about it, write to <a href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20Enquiry">asocconference@gmail.com</a>. The submission guidelines below are kept here for reference.</div>
 
     <div class="deadline-row">
-      <div class="dl-card"><b>Submission Deadline &mdash; Extended</b><span class="was">August 30, 2026</span><span>September 6, 2026</span></div>
+      <div class="dl-card"><b>Submission Deadline &mdash; Closed</b><span>September 6, 2026</span></div>
       <div class="dl-card blue"><b>Acceptance Decisions By</b><span>September 10, 2026</span></div>
-      <a class="submit-cta" href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20-%20%5BPresenting%20Author%20Last%20Name%5D">✉️ Submit Your Abstract</a>
+      <a class="submit-cta" href="register.html">🎫 Register to Attend</a>
     </div>
 
     <h3 style="font-family:var(--display);font-size:1.35rem;color:var(--navy);margin-bottom:4px">Abstract categories</h3>
@@ -871,7 +858,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
       </ul>
     </div>
 
-    <div class="abs-welcome"><b>Ready to submit?</b> Email your abstract to <a href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20-%20%5BPresenting%20Author%20Last%20Name%5D">asocconference@gmail.com</a> with the subject "ASOC 2026 Abstract - [Presenting Author Last Name]" before the extended deadline of September 6, 2026.</div>
+    <div class="abs-welcome"><b>Already submitted?</b> Acceptance decisions go to the presenting author by email. If you have not had confirmation that your abstract was received, contact <a href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20Enquiry">asocconference@gmail.com</a>. Registration for the conference is <a href="register.html">still open and free</a>.</div>
   </div>
 </section>
 
@@ -1195,7 +1182,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 })();
 </script>
 <script>
-// ---- one-time deadline announcement ----
+// ---- one-time announcement bar ----
 (function(){
   var bar = document.getElementById('announceStack');
   if(!bar) return;
