@@ -19,7 +19,7 @@ Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Afri
 ## Assets
 
 - `aso-logo.png` — African Stroke Organization logo
-- `chair-mehari.jpg`, `chair-wondwossen.jpg` — conference chair portraits
+- `chair-mehari.jpg` — conference chair portrait
 - `share-card.png` — 1200×630 Open Graph image for social sharing
 - `favicon.ico`, `favicon.png`, `favicon-96.png` — site icons
 
