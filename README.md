@@ -13,13 +13,13 @@ Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Afri
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — hero, about, conference history, program, attending online, call for abstracts, hosts, themes, leadership, sponsorship |
+| `index.html` | Home — hero, about, conference history, program, attending online, hosts, themes, leadership, sponsorship |
 | `register.html` | Registration — embedded registration form, joining details |
 
 ## Assets
 
 - `aso-logo.png` — African Stroke Organization logo
-- `chair-mehari.jpg` — conference chair portrait
+- `chair-mehari.jpg`, `chair-sarfo.png` — conference chair portraits
 - `share-card.png` — 1200×630 Open Graph image for social sharing
 - `favicon.ico`, `favicon.png`, `favicon-96.png` — site icons
 
