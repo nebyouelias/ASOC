@@ -72,7 +72,8 @@
     "validFrom": "2026-07-01"
   },
   "performer": [
-    {"@type": "Person", "name": "Mehari Gebreyohanns, MD"}
+    {"@type": "Person", "name": "Mehari Gebreyohanns, MD"},
+    {"@type": "Person", "name": "Prof. Stephen Sarfo"}
   ],
   "url": "https://asoc-africanstroke.org/"
 }
@@ -308,43 +309,10 @@ h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,3.4vw,2.6re
 .day li{margin-bottom:6px}
 @media(max-width:760px){.days{grid-template-columns:1fr}}
 
-/* abstracts: deadline extended announcement */
-.extended{display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#B0221F,var(--crimson-deep,#C1272D));border-radius:16px;padding:20px 26px;margin:0 0 30px;box-shadow:0 14px 34px rgba(193,39,45,.28);position:relative;overflow:hidden}
-.extended::after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);animation:sheen 4.5s ease-in-out infinite}
 @keyframes sheen{0%{left:-60%}45%{left:120%}100%{left:120%}}
-.extended .badge{flex:none;background:#fff;color:#B0221F;font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:8px 16px;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-.extended .msg{color:#fff;position:relative;z-index:1}
-.extended .msg b{display:block;font-family:var(--display);font-size:1.5rem;line-height:1.15;margin-bottom:3px}
-.extended .msg span{font-size:.94rem;opacity:.95}
-.extended .msg s{opacity:.7}
-@media(max-width:640px){.extended{flex-direction:column;align-items:flex-start;gap:12px;text-align:left}}
-@media(prefers-reduced-motion:reduce){.extended::after,.extended .badge{animation:none}}
-.dl-card .was{display:block;font-size:.8rem;color:#9aa5c4;font-weight:600;text-decoration:line-through;margin-bottom:2px}
-
-/* abstracts */
-.deadline-row{display:grid;grid-template-columns:1fr 1fr auto;gap:20px;align-items:stretch;margin:36px 0 44px}
-.dl-card{background:var(--white);border:1px solid var(--mist);border-radius:14px;padding:22px 26px;border-top:4px solid var(--gold)}
-.dl-card.blue{border-top-color:var(--royal)}
-.dl-card b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#6b7ba3;font-weight:700;margin-bottom:6px}
-.dl-card span{font-family:var(--display);font-size:1.35rem;color:var(--navy);font-weight:700}
 .submit-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;font-size:1rem;padding:0 34px;border-radius:14px;background:var(--royal);color:#fff;box-shadow:0 8px 24px rgba(28,99,201,.3);transition:transform .15s,box-shadow .15s}
 .submit-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(28,99,201,.4)}
-.cat-grid{columns:2;column-gap:28px;margin-top:28px;counter-reset:cat}
-.cat{break-inside:avoid;display:flex;gap:12px;background:var(--white);border:1px solid var(--mist);border-radius:12px;padding:14px 18px;margin-bottom:12px;font-size:.9rem;color:#33427A;font-weight:500}
-.cat::before{counter-increment:cat;content:counter(cat);flex:none;width:26px;height:26px;border-radius:8px;background:var(--ice);border:1px solid var(--mist);color:var(--royal);font-weight:700;font-size:.78rem;display:flex;align-items:center;justify-content:center}
-.abs-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
-.abs-card{background:var(--white);border:1px solid var(--mist);border-radius:16px;padding:30px}
-.abs-card h3{font-family:var(--display);font-size:1.25rem;color:var(--navy);margin-bottom:14px}
-.abs-card ol,.abs-card ul{margin-left:18px;font-size:.88rem;color:#33427A}
-.abs-card li{margin-bottom:8px}
-.abs-note{background:linear-gradient(135deg,var(--navy),#22399B);border-radius:16px;padding:34px;color:#fff;margin-top:32px}
-.abs-note h3{font-family:var(--display);font-size:1.25rem;color:var(--gold-soft);margin-bottom:14px}
-.abs-note ul{margin-left:18px;font-size:.88rem;color:rgba(255,255,255,.92)}
-.abs-note li{margin-bottom:8px}
-.abs-welcome{margin-top:28px;padding:18px 24px;background:var(--white);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;box-shadow:0 4px 16px rgba(27,42,107,.06);max-width:76ch;font-size:.94rem;color:#33427A}
-.abs-welcome b{color:var(--navy)}
-@media(max-width:860px){.deadline-row{grid-template-columns:1fr}.submit-cta{padding:16px 34px}.cat-grid{columns:1}.abs-cols{grid-template-columns:1fr}}
+@media(max-width:860px){.submit-cta{padding:16px 34px}}
 
 /* hosts */
 .host-card .logo{height:110px;width:auto;margin:0 auto 18px;object-fit:contain}
@@ -463,10 +431,8 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
      "acceptedAnswer":{"@type":"Answer","text":"Registration is open and free for all participants. Complete the registration form at https://asoc-africanstroke.org/register.html and the joining details will be emailed to you."}},
     {"@type":"Question","name":"Is there a registration fee for ASOC 2026?",
      "acceptedAnswer":{"@type":"Answer","text":"No. There is no registration fee this year. Registration is required for all participants, and the conference is open to participants anywhere in the world."}},
-    {"@type":"Question","name":"What is the abstract submission deadline for ASOC 2026?",
-     "acceptedAnswer":{"@type":"Answer","text":"Abstract submissions for ASOC 2026 closed on September 6, 2026. Presenting authors are notified by email at the address used for their submission. Registration for the conference is still open and free."}},
     {"@type":"Question","name":"Who organizes ASOC 2026?",
-     "acceptedAnswer":{"@type":"Answer","text":"ASOC 2026 is organized by the African Stroke Organization. The conference chair is Dr. Mehari Gebreyohanns."}}
+     "acceptedAnswer":{"@type":"Answer","text":"ASOC 2026 is presented by the African Stroke Organization. The conference chair is Dr. Mehari Gebreyohanns and the co-chair is Prof. Stephen Sarfo."}}
   ]
 }
 </script>
@@ -504,7 +470,6 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
         </div>
       </div>
       <a href="register.html">Register</a>
-      <a href="#abstracts">Abstracts</a>
       <a href="#support">Support Us</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -521,7 +486,6 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
   <a href="#program">Program</a>
   <a href="#online">Attend Online</a>
   <a href="register.html">Register</a>
-  <a href="#abstracts">Call for Abstracts</a>
   <a href="#hosts">Hosts</a>
   <a href="#themes">Themes</a>
   <p class="grp">More</p>
@@ -721,88 +685,6 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
   </div>
 </section>
 
-<!-- ================= ABSTRACTS ================= -->
-<section class="block lattice" id="abstracts">
-  <div class="wrap">
-    <p class="kicker kicker-xl">Abstracts</p>
-    <h2>Share your science</h2>
-    <p class="body">ASOC 2026 invited abstracts for poster or oral presentation from researchers at all career stages, with particular encouragement for early-career researchers, postdoctoral fellows, residents, graduate students, and trainees. All accepted abstracts will be published in a peer-reviewed journal.</p>
-
-    <div class="abs-welcome" role="status" style="margin-top:0"><b>Abstract submissions are now closed.</b> The deadline was September 6, 2026. Presenting authors are notified of acceptance decisions by email. If you submitted an abstract and have a question about it, write to <a href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20Enquiry">asocconference@gmail.com</a>. The submission guidelines below are kept here for reference.</div>
-
-    <div class="deadline-row">
-      <div class="dl-card"><b>Submission Deadline &mdash; Closed</b><span>September 6, 2026</span></div>
-      <div class="dl-card blue"><b>Acceptance Decisions By</b><span>September 10, 2026</span></div>
-      <a class="submit-cta" href="register.html">🎫 Register to Attend</a>
-    </div>
-
-    <h3 style="font-family:var(--display);font-size:1.35rem;color:var(--navy);margin-bottom:4px">Abstract categories</h3>
-    <p class="body">Abstracts may be submitted in any of the following thirteen categories:</p>
-    <div class="cat-grid">
-      <div class="cat">Acute Stroke Treatment including Neuroendovascular</div>
-      <div class="cat">Aneurysms and Vascular Malformations including Procedural Interventions</div>
-      <div class="cat">Brain Health, Risk Factors, and Prevention of vascular brain injury</div>
-      <div class="cat">Cerebrovascular Manifestations of COVID-19</div>
-      <div class="cat">Cerebrovascular Nursing and Allied Health Care</div>
-      <div class="cat">Clinical Rehabilitation and Recovery</div>
-      <div class="cat">Health Services: Systems of Care including Tele-stroke, Quality Improvement, Patient-Centered Outcomes, and Post-stroke complications</div>
-      <div class="cat">Imaging: Brain or vascular imaging</div>
-      <div class="cat">Non-Acute Large Vessel Disease</div>
-      <div class="cat">Pediatric Cerebrovascular Disease</div>
-      <div class="cat">Translational Basic Science and Precision Stroke Medicine: Genetics, Omics, and Biomarkers</div>
-      <div class="cat">Unusual Causes of Stroke (cerebral sinovenous thrombosis, coagulopathies, dissection, etc.)</div>
-      <div class="cat">Hemorrhagic Stroke</div>
-    </div>
-
-    <div class="abs-cols">
-      <div class="abs-card">
-        <h3>Submission rules</h3>
-        <ol>
-          <li>Abstracts must be submitted in English.</li>
-          <li>Use "ASOC 2026 Abstract - [Presenting Author Last Name]" as the subject line of the submission email.</li>
-          <li>Submit ONE abstract per email. Multiple submissions on the same email might not be considered.</li>
-          <li>Abstracts must be submitted as a Microsoft Word (.doc or .docx) document.</li>
-          <li>Abstracts may be submitted for either poster or oral presentation.</li>
-          <li>The ASOC Steering Committee will determine whether the abstract will be accepted for presentation.</li>
-          <li>Abstracts must be received by the stated deadline; late abstracts will not be considered.</li>
-          <li>Abstracts should be written in clear English with accurate grammar and spelling of publication quality. If you need help, arrange review by a native English-speaking colleague, a university publications office, or a copy editor before submitting.</li>
-        </ol>
-      </div>
-      <div class="abs-card">
-        <h3>Abstract structure</h3>
-        <ol>
-          <li>Presenting author's contact details: full first and family name(s), email address, affiliation (department, institution/hospital, city, state if relevant, country), and phone number.</li>
-          <li>Author and co-authors' details.</li>
-          <li>Title in UPPER CASE, limited to 25 words. Submit symbols as words.</li>
-          <li>Abstract text limited to 250 words including acknowledgements (tables affect the word count). Submit the text as a Word or PDF file.</li>
-          <li>Abstracts should clearly state: Background and aims, Methods, Results, and Conclusions.</li>
-          <li>Images: maximum 500 KB each, maximum 600(w) x 800(h) pixels, in JPG, GIF, or PNG format, sent in the same message as the abstract text.</li>
-          <li>Use only standard abbreviations; place unusual abbreviations in parentheses after the full word at first use.</li>
-          <li>Use generic drug names; presentations must be balanced with no commercial promotional content.</li>
-          <li>No patient names, hospital ID numbers, or other identifying information.</li>
-          <li>Changes are not possible after submission. Once received, the program coordinator will contact you to confirm receipt.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="abs-note">
-      <h3>Please note</h3>
-      <ul>
-        <li>The same person may submit up to 5 abstracts regardless of presenting author, and may serve as presenting author on no more than 2 abstracts.</li>
-        <li>Presenting authors are required to register for the conference. Only registered presenting authors will be scheduled for presentation and included in the program; registration details and deadlines will be provided upon acceptance.</li>
-        <li>Submission of an abstract acknowledges your acceptance for it to be published in the official conference publications; all accepted abstracts will be published in a peer-reviewed journal.</li>
-        <li>The presenting author must ensure all co-authors are aware of the abstract's content and agree to its submission.</li>
-        <li>Abstracts presented at another scientific meeting within the previous 12 months are not eligible.</li>
-        <li>Submitters will be required to disclose any conflicts of interest.</li>
-        <li>If accepted for poster or oral presentation, you will receive further communication about presenting on the virtual platform.</li>
-        <li>Please do not submit multiple copies of the same abstract, and contact us if you have not received confirmation that your abstract was received.</li>
-      </ul>
-    </div>
-
-    <div class="abs-welcome"><b>Already submitted?</b> Acceptance decisions go to the presenting author by email. If you have not had confirmation that your abstract was received, contact <a href="mailto:asocconference@gmail.com?subject=ASOC%202026%20Abstract%20Enquiry">asocconference@gmail.com</a>. Registration for the conference is <a href="register.html">still open and free</a>.</div>
-  </div>
-</section>
-
 <svg class="ekg blue" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true">
   <path d="M0 23 H900 L915 23 927 8 941 38 953 15 965 23 H1200" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
 </svg>
@@ -864,14 +746,22 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 <section class="block" id="leadership">
   <div class="wrap">
     <p class="kicker">Leadership</p>
-    <h2>Conference chair</h2>
-    <p class="body">ASOC 2026 is chaired by the African Stroke Organization.</p>
-    <div class="leaders" style="grid-template-columns:minmax(0,300px)">
+    <h2>Conference chairs</h2>
+    <p class="body">ASOC 2026 is presented by the African Stroke Organization.</p>
+    <div class="leaders">
       <div class="leader">
         <div class="photo-wrap"><img loading="lazy" decoding="async" src="chair-mehari.jpg" alt="Dr. Mehari Gebreyohanns, MD, Conference Chair"></div>
         <div class="info">
           <p class="role">Conference Chair</p>
           <h3>Mehari Gebreyohanns, MD</h3>
+          <p class="cred">African Stroke Organization</p>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="photo-wrap"><img loading="lazy" decoding="async" src="chair-sarfo.png" alt="Professor Stephen Sarfo, Conference Co-Chair"></div>
+        <div class="info">
+          <p class="role">Conference Co-Chair</p>
+          <h3>Prof. Stephen Sarfo</h3>
           <p class="cred">African Stroke Organization</p>
         </div>
       </div>
@@ -941,7 +831,6 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
         <li><a href="#program">Program at a Glance</a></li>
         <li><a href="#online">Attend Online</a></li>
         <li><a href="register.html">Register</a></li>
-        <li><a href="#abstracts">Call for Abstracts</a></li>
         <li><a href="#hosts">Convening Organizations</a></li>
         <li><a href="#themes">Themes</a></li>
       </ul>
