@@ -14,7 +14,7 @@ Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Afri
 | File | Purpose |
 |---|---|
 | `index.html` | Home — hero, about, conference history, program, attending online, hosts, themes, leadership, sponsorship |
-| `register.html` | Registration — embedded registration form, joining details |
+| `register.html` | Registration — "opening soon" notice, what to have ready, joining details |
 
 ## Assets
 
@@ -46,7 +46,7 @@ Open the relevant `.html` file and edit directly — styles are in a `<style>` b
 - **Conference dates** — search for `December 16` (and `20261216` for the Google Calendar link and `2026-12-16` for the countdown target and structured data)
 - **Joining details** — the "Attend Online" section is `#online` in `index.html`; the platform and session times are stated as "to be announced" and need filling in once known
 - **Announcement bar** — search for `announce-stack` near the top of the `<body>`
-- **Registration form** — the embedded form URL is in `register.html`, search for `docs.google.com/forms`
+- **Registration form** — the form is not live yet. `register.html` carries an "opening soon" notice in the `#form` section; drop the embed back in there when the form is ready
 
 ## Contact
 
