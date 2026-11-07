@@ -51,8 +51,8 @@
   "image": [
     "https://asoc-africanstroke.org/share-card.png"
   ],
-  "startDate": "2026-12-16",
-  "endDate": "2026-12-17",
+  "startDate": "2026-12-16T13:00:00+00:00",
+  "endDate": "2026-12-17T19:00:00+00:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "location": {
@@ -67,7 +67,8 @@
     "name": "Conference Registration",
     "price": "0",
     "priceCurrency": "USD",
-    "url": "https://asoc-africanstroke.org/register.html"
+    "availability": "https://schema.org/InStock",
+    "url": "https://events.zoom.us/ev/AkWjVm7Yw5AYZAO_BREAidjMMvow6bOF3rYmJI9O17L1VwNQrlNn~AosnmaBjhPpVNsH2uFFeI3-i4nIIyOwJtmH8AS6Ti1V9M_AoyxCIr-Z3Rg"
   },
   "performer": [
     {"@type": "Person", "name": "Mehari Gebreyohanns, MD"},
@@ -426,7 +427,9 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     {"@type":"Question","name":"Where is ASOC 2026 held?",
      "acceptedAnswer":{"@type":"Answer","text":"ASOC 2026 is a fully online conference. There is no travel and no physical venue: participants join the sessions over the internet from anywhere in the world, and the joining link is sent by email to everyone who registers."}},
     {"@type":"Question","name":"How do I register for ASOC 2026?",
-     "acceptedAnswer":{"@type":"Answer","text":"Registration is free for all participants. The online registration form has not opened yet; it will be posted at https://asoc-africanstroke.org/register.html, and joining details are emailed to everyone who registers."}},
+     "acceptedAnswer":{"@type":"Answer","text":"Registration is open and free for all participants. Register through Zoom Events from https://asoc-africanstroke.org/register.html and the joining link and programme are emailed to the address you register with."}},
+    {"@type":"Question","name":"What time do the ASOC 2026 sessions run?",
+     "acceptedAnswer":{"@type":"Answer","text":"Sessions run at the same hours on both days: 13:00 to 19:00 GMT, which is 7:00 AM to 1:00 PM US Central, 14:00 to 20:00 in Lagos, 15:00 to 21:00 in Johannesburg, and 16:00 to 22:00 in Addis Ababa and Nairobi."}},
     {"@type":"Question","name":"Is there a registration fee for ASOC 2026?",
      "acceptedAnswer":{"@type":"Answer","text":"No. There is no registration fee this year. Registration is required for all participants, and the conference is open to participants anywhere in the world."}},
     {"@type":"Question","name":"Who organizes ASOC 2026?",
@@ -440,9 +443,9 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 <div class="announce-stack" id="announceStack">
 <div class="announce reg">
   <a href="register.html">
-    <span class="tag">Coming Soon</span>
-    <span><strong>Online registration opens soon</strong> &mdash; free for all participants</span>
-    <span class="go">See details &rarr;</span>
+    <span class="tag">Now Open</span>
+    <span><strong>Registration is now open</strong> &mdash; free for all participants</span>
+    <span class="go">Register now &rarr;</span>
   </a>
   <button class="close" id="announceClose" aria-label="Dismiss announcements">&times;</button>
 </div>
@@ -513,7 +516,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
       <div class="tibeb" aria-hidden="true"></div>
       <div class="inner">
         <h3>Conference at a Glance</h3>
-        <div class="row"><div class="ic">📅</div><div><b>December 16–17, 2026</b><span>Two days of online sessions · Wednesday and Thursday</span></div></div>
+        <div class="row"><div class="ic">📅</div><div><b>December 16–17, 2026</b><span>Wednesday and Thursday · 13:00–19:00 GMT each day</span></div></div>
         <div class="row"><div class="ic">💻</div><div><b>Held Online</b><span>Join from anywhere · Link emailed to registrants</span></div></div>
         <div class="row"><div class="ic">#</div><div><b>#ASOC2026</b><span>Join the conversation</span></div></div>
         <div class="countdown" aria-label="Countdown to opening of scientific sessions">
@@ -523,7 +526,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
           <div class="cd"><b id="cd-s">, </b><span>Sec</span></div>
         </div>
         <a class="btn register-pulse" href="register.html">
-          Registration Opening Soon
+          <span class="live"></span> Register Now
         </a>
         <div class="actions">
           <a class="btn primary" href="#program">View the Program</a>
@@ -665,16 +668,17 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     <div class="days">
       <div class="day">
         <span class="date">How to join</span>
-        <h3>Registration opens soon</h3>
-        <p>The online registration form will be posted on the <a href="register.html">registration page</a> shortly. Registration is free, and once you have registered the joining link, platform details, and programme are emailed to you ahead of December 16.</p>
-        <p><a class="submit-cta" style="padding:14px 26px;margin-top:16px" href="register.html">Registration details &rarr;</a></p>
+        <h3>Register, then watch your inbox</h3>
+        <p>Registration is free and runs through Zoom Events. Once you have registered, the joining link and the programme are sent to the email address you register with, ahead of December 16.</p>
+        <p><a class="submit-cta" style="padding:14px 26px;margin-top:16px" href="register.html">Register free &rarr;</a></p>
       </div>
       <div class="day main">
         <span class="date">Good to know</span>
         <h3>Before the sessions</h3>
         <ul>
           <li>Two days of sessions: Wednesday, December 16 and Thursday, December 17</li>
-          <li>Session times, the platform, and the full programme will be announced here</li>
+          <li>Same hours both days: 13:00&ndash;19:00 GMT &middot; 7:00 AM&ndash;1:00 PM US Central &middot; 14:00&ndash;20:00 Lagos &middot; 15:00&ndash;21:00 Johannesburg &middot; 16:00&ndash;22:00 Addis Ababa and Nairobi</li>
+          <li>Keynote and plenary sessions, a virtual poster gallery, a sponsor exhibit hall, a networking lounge, and session recordings</li>
           <li>A stable internet connection is all you need; join from a laptop or a phone</li>
           <li>Register with an email address you check, that is where the link will be sent</li>
         </ul>
@@ -848,9 +852,9 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 </footer>
 
 <script>
-// Countdown to the opening of the online sessions: Dec 16, 2026, 09:00 UTC
+// Countdown to the opening of the online sessions: Dec 16, 2026, 13:00 GMT
 (function(){
-  var target = new Date('2026-12-16T09:00:00+00:00').getTime();
+  var target = new Date('2026-12-16T13:00:00+00:00').getTime();
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),
       m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
   function tick(){
@@ -946,8 +950,8 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 (function(){
   var url = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
     + '&text=' + encodeURIComponent('ASOC 2026, 6th African Stroke Organization Conference')
-    + '&dates=20261216/20261218'
-    + '&details=' + encodeURIComponent('The 6th African Stroke Organization Conference, held online on December 16 and 17, 2026. Theme: Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Africa. Free registration opens soon at https://asoc-africanstroke.org/register.html #ASOC2026')
+    + '&dates=20261216T130000Z/20261217T190000Z'
+    + '&details=' + encodeURIComponent('The 6th African Stroke Organization Conference, held online on December 16 and 17, 2026. Theme: Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Africa. Sessions run 13:00-19:00 GMT on both days. Register free at https://asoc-africanstroke.org/register.html #ASOC2026')
     + '&location=' + encodeURIComponent('Online');
   document.getElementById('cal-link').href = url;
 })();
