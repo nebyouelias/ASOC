@@ -47,7 +47,7 @@ Open the relevant `.html` file and edit directly — styles are in a `<style>` b
 - **Joining details** — the "Attend Online" section is `#online` in `index.html`; the platform and session times are stated as "to be announced" and need filling in once known
 - **Announcement bar** — search for `announce-stack` near the top of the `<body>`
 - **Registration** — registration runs on Zoom Events; the link is the `.zoom-cta` button in the `#form` section of `register.html`
-- **Session times** — the time table is in `register.html` (`.times`), and the same hours appear in the home page hero card, the Attend Online list, and the times FAQ
+- **Session times** — a one-line strip in `register.html` (`.timestrip`); the same hours also appear in the home page hero card, the Attend Online list, and the times FAQ
 
 ## Contact
 

@@ -106,10 +106,8 @@ body.nav-open{overflow:hidden}
 section.block{background:var(--paper);padding:72px 0}
 .zoom-cta{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--royal);color:#fff;font-weight:700;font-size:1.05rem;padding:17px 34px;border-radius:14px;text-decoration:none;box-shadow:0 10px 28px rgba(28,99,201,.32);transition:transform .15s,box-shadow .15s}
 .zoom-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(28,99,201,.42)}
-.times{margin-top:14px;max-width:560px;background:var(--white);border:1px solid var(--mist);border-radius:14px;padding:6px 22px}
-.trow{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--mist);font-size:.95rem;color:#33427A}
-.trow:last-child{border-bottom:none}
-.trow b{font-family:var(--display);font-size:1.05rem;color:var(--navy);white-space:nowrap}
+.timestrip{margin-top:30px;max-width:72ch;border-top:1px solid rgba(201,162,39,.55);border-bottom:1px solid rgba(201,162,39,.55);padding:12px 0;font-size:.95rem;line-height:1.6;color:#33427A}
+.timestrip b{color:var(--navy)}
 
 @media(max-width:760px){section.block{padding:48px 0}.page-hero{padding:56px 0 44px}}
 section.block.alt{background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 6 L50 28 L28 50 L6 28 Z' fill='none' stroke='%231B2A6B' stroke-opacity='0.05' stroke-width='1.4'/%3E%3Cpath d='M28 18 L38 28 L28 38 L18 28 Z' fill='none' stroke='%23C9A227' stroke-opacity='0.07' stroke-width='1.2'/%3E%3C/svg%3E") repeat}
@@ -232,15 +230,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:48px 0 36px;font-size:.88rem}
     <h2>Register for ASOC 2026</h2>
     <p class="body">Registration is handled through Zoom Events and is free for every participant, whether you join a single session or both days. Once you have registered, your joining link and the programme are sent to the email address you register with.</p>
     <a class="zoom-cta" href="https://events.zoom.us/ev/AkWjVm7Yw5AYZAO_BREAidjMMvow6bOF3rYmJI9O17L1VwNQrlNn~AosnmaBjhPpVNsH2uFFeI3-i4nIIyOwJtmH8AS6Ti1V9M_AoyxCIr-Z3Rg" target="_blank" rel="noopener">Register on Zoom Events &rarr;</a>
-    <h3 style="font-family:var(--display);font-size:1.3rem;color:var(--navy);margin:38px 0 6px">Session times</h3>
-    <p class="body">The sessions run at the same hours on both days.</p>
-    <div class="times">
-      <div class="trow"><span>GMT &middot; Accra</span><b>13:00 &ndash; 19:00</b></div>
-      <div class="trow"><span>US Central</span><b>7:00 AM &ndash; 1:00 PM</b></div>
-      <div class="trow"><span>Lagos</span><b>14:00 &ndash; 20:00</b></div>
-      <div class="trow"><span>Johannesburg</span><b>15:00 &ndash; 21:00</b></div>
-      <div class="trow"><span>Addis Ababa &middot; Nairobi</span><b>16:00 &ndash; 22:00</b></div>
-    </div>
+    <p class="timestrip"><b>Both days 13:00&ndash;19:00 GMT</b> &middot; 7:00 AM&ndash;1:00 PM US Central &middot; 14:00 Lagos &middot; 15:00 Johannesburg &middot; 16:00 Addis Ababa &amp; Nairobi</p>
   </div>
 </section>
 
