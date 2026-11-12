@@ -15,6 +15,7 @@ Theme: *Enhancing Capacity, Expanding Impact: Stroke Care Transformation in Afri
 |---|---|
 | `index.html` | Home — hero, about, conference history, program, attending online, hosts, themes, leadership, sponsorship |
 | `register.html` | Registration — "opening soon" notice, what to have ready, joining details |
+| `sponsors.html` | Sponsors — sponsor recognition, and how to sponsor the conference |
 
 ## Assets
 
@@ -47,6 +48,7 @@ Open the relevant `.html` file and edit directly — styles are in a `<style>` b
 - **Joining details** — the "Attend Online" section is `#online` in `index.html`; the platform and session times are stated as "to be announced" and need filling in once known
 - **Announcement bar** — search for `announce-stack` near the top of the `<body>`
 - **Registration** — registration runs on Zoom Events; the link is the `.zoom-cta` button in the `#form` section of `register.html`
+- **Sponsors** — sponsor entries live in `sponsors.html` (`.sponsor`); the home page carries a `.spon-strip` band under the stats. Swap a sponsor’s `.sp-mark` wordmark for an `<img>` once a logo file is in the repo
 - **Session times** — a one-line strip in `register.html` (`.timestrip`); the same hours also appear in the home page hero card, the Attend Online list, and the times FAQ
 
 ## Contact
