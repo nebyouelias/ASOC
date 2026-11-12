@@ -222,6 +222,17 @@ h1 em{font-style:italic;color:var(--gold)}
   .hero .wrap{grid-template-columns:1fr;gap:44px;padding-top:60px;padding-bottom:60px}
 }
 
+/* sponsors strip */
+.spon-strip{background:var(--white);border-top:1px solid var(--mist);border-bottom:1px solid var(--mist)}
+.spon-strip .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding-top:30px;padding-bottom:30px}
+.spon-strip .lab{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#6b7ba3;font-weight:800;flex:none}
+.spon-strip .mk{display:inline-flex;flex-direction:column;justify-content:center;border-left:3px solid var(--gold);padding-left:18px}
+.spon-strip .mk b{font-family:var(--display);font-size:1.22rem;color:var(--navy);line-height:1.15}
+.spon-strip .mk small{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--royal);font-weight:700;margin-top:4px}
+.spon-strip a.more{margin-left:auto;font-weight:700;color:var(--royal);text-decoration:none;font-size:.92rem}
+.spon-strip a.more:hover{text-decoration:underline}
+@media(max-width:640px){.spon-strip .wrap{gap:18px}.spon-strip a.more{margin-left:0}}
+
 /* ---------- tibeb pattern strips ---------- */
 .announce.reg{background:linear-gradient(120deg,#154C9E,#1C63C9)}
 .announce.reg .tag{color:#154C9E}
@@ -471,6 +482,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
         </div>
       </div>
       <a href="register.html">Register</a>
+      <a href="sponsors.html">Sponsors</a>
       <a href="#support">Support Us</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -490,6 +502,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
   <a href="#hosts">Hosts</a>
   <a href="#themes">Themes</a>
   <p class="grp">More</p>
+  <a href="sponsors.html">Sponsors</a>
   <a href="#leadership">Leadership</a>
   <a href="#support">Support Us</a>
   <a href="#connect">Stay Connected</a>
@@ -549,6 +562,15 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     <div class="stat"><b>1 <i>in</i> 4</b><p>adults worldwide will experience a stroke in their lifetime, Africa carries a disproportionate share of that burden.</p></div>
     <div class="stat"><b>6<i>th</i></b><p>edition of ASOC, from its virtual launch in 2021 to the continent's premier annual stroke forum.</p></div>
     <div class="stat"><b>2<i>-day</i></b><p>online program on December 16 and 17, open to participants anywhere in the world at no cost.</p></div>
+  </div>
+</section>
+
+<!-- ================= SPONSORS STRIP ================= -->
+<section class="spon-strip" aria-label="Conference sponsors">
+  <div class="wrap">
+    <span class="lab">Supported by</span>
+    <a class="mk" href="sponsors.html" style="text-decoration:none"><b>Zeenat Qureshi</b><small>Stroke Institutes</small></a>
+    <a class="more" href="sponsors.html">Our sponsors &rarr;</a>
   </div>
 </section>
 
@@ -786,6 +808,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     </div>
     <p class="body" style="margin-top:36px">For sponsorship enquiries, please contact the event organizers:</p>
     <a class="contact-cta" href="mailto:asocconference@gmail.com">✉️ asocconference@gmail.com</a>
+    <a class="back" href="sponsors.html">See the organizations supporting ASOC 2026 &rarr;</a>
   </div>
 </section>
 
@@ -840,6 +863,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
     <div>
       <h4>More</h4>
       <ul>
+        <li><a href="sponsors.html">Sponsors</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#support">Support Us</a></li>
         <li><a href="#connect">Stay Connected</a></li>
