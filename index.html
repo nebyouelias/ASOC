@@ -226,9 +226,11 @@ h1 em{font-style:italic;color:var(--gold)}
 .spon-strip{background:var(--white);border-top:1px solid var(--mist);border-bottom:1px solid var(--mist)}
 .spon-strip .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding-top:30px;padding-bottom:30px}
 .spon-strip .lab{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#6b7ba3;font-weight:800;flex:none}
-.spon-strip .mk{display:inline-flex;flex-direction:column;justify-content:center;border-left:3px solid var(--gold);padding-left:18px}
-.spon-strip .mk b{font-family:var(--display);font-size:1.22rem;color:var(--navy);line-height:1.15}
-.spon-strip .mk small{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--royal);font-weight:700;margin-top:4px}
+.spon-strip .mk{display:inline-flex;align-items:center;gap:16px;text-decoration:none}
+.spon-strip .mk img{width:58px;height:58px;border-radius:50%;background:#fff;display:block;flex:none}
+.spon-strip .nm{display:flex;flex-direction:column;justify-content:center;border-left:3px solid var(--gold);padding-left:16px}
+.spon-strip .nm b{font-family:var(--display);font-size:1.22rem;color:var(--navy);line-height:1.15}
+.spon-strip .nm small{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--royal);font-weight:700;margin-top:4px}
 .spon-strip a.more{margin-left:auto;font-weight:700;color:var(--royal);text-decoration:none;font-size:.92rem}
 .spon-strip a.more:hover{text-decoration:underline}
 @media(max-width:640px){.spon-strip .wrap{gap:18px}.spon-strip a.more{margin-left:0}}
@@ -569,7 +571,7 @@ footer{background:var(--ink);color:#B9C6E4;padding:56px 0 40px;font-size:.88rem}
 <section class="spon-strip" aria-label="Conference sponsors">
   <div class="wrap">
     <span class="lab">Supported by</span>
-    <a class="mk" href="sponsors.html" style="text-decoration:none"><b>Zeenat Qureshi</b><small>Stroke Institutes</small></a>
+    <a class="mk" href="sponsors.html"><img src="sponsor-zqsi.png" width="58" height="58" alt="Zeenat Qureshi Stroke Institutes logo"><span class="nm"><b>Zeenat Qureshi</b><small>Stroke Institutes</small></span></a>
     <a class="more" href="sponsors.html">Our sponsors &rarr;</a>
   </div>
 </section>
